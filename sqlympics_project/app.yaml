@@ -1,0 +1,14 @@
+runtime: python311
+entrypoint: gunicorn -b :$PORT sqlympics_project.wsgi
+
+instance_class: F2
+
+env_variables:
+  DJANGO_SETTINGS_MODULE: "sqlympics_project.settings"
+  OPENAI_API_KEY: ${OPENAI_API_KEY} 
+
+handlers:
+  - url: /static
+    static_dir: dbapp/static
+  - url: /.*
+    script: auto

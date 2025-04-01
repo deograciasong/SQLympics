@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLympics</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <h1>SQLympics</h1>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h2>Welcome to SQLympics</h2>
+            <p>Enhance your SQL skills through a gamified learning experience! Progress through levels like Bronze, Silver, Gold, and more while solving fun and challenging SQL problems.</p>
+            <div class="buttons">
+                <button onclick="location.href='register.html'">Register</button>
+                <button onclick="location.href='student_login.html'">Student Login</button>
+                <button onclick="location.href='instructor_login.html'">Instructor Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="chatbot-icon">ChatBot💬</div>
+
+    <!-- Chatbot Popup -->
+    <div id="chatbot-popup" class="chatbot-popup">
+        <div class="chatbot-header">
+            <span>Chatbot</span>
+            <button id="close-chatbot">&times;</button>
+        </div>
+        <div class="chatbot-body" id="chatbot-body">
+            <p>Bot: Hello! How can I assist you with SQLympics?</p>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="chat-input" placeholder="Type your message...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
