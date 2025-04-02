@@ -1,1 +1,1 @@
-### replace OPENAI_API_KEY in app.yaml with real api key before deploy!
+### replace openai_api_key in chatbot.py line 9 with real api key(openai_api_key = "sk-xxxx" before deploy!
