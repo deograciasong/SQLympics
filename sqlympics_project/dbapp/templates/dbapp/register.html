@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-box">
+        <h2>Register</h2>
+        <form>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="date" required>
+            <select required>
+                <option value="">Select Category</option>
+                <option value="Student">Student</option>
+                <option value="Instructor">Instructor</option>
+            </select>
+            <input type="email" placeholder="Email ID" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" onclick="location.href='student_dashboard.html'">Register</button>
+        </form>
+        
+    </div>
+    <script>
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const category = document.getElementById('category').value;
+            
+            if (category === "student") {
+                window.location.href = "student_dashboard.html";
+            } else if (category === "instructor") {
+                window.location.href = "instructor_dashboard.html";
+            }
+        });
+    </script>
+</body>
+</html>
